@@ -22,7 +22,7 @@ export const DocumentFetchContextProvider = ({children}) => {
           const data = await response.json();
           console.log("Resume data:", data);
           setParsedData(data); // Set the parsed data in state
-          window.alert("Upload complete!"); // Display an alert when upload is complete
+          window.alert("Your file is successfully parsed"); // Display an alert when upload is complete
         } else {
           console.error("Failed to extract resume data");
         }
