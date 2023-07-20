@@ -24,7 +24,7 @@ const Footer = () => {
           justifyContent: "center",
         }}
       >
-        <Box component="li" sx={{ mx: 2 }}>
+        {/* <Box component="li" sx={{ mx: 2 }}>
           <Link href="/" color="inherit">
             Terms and Conditions
           </Link>
@@ -48,8 +48,8 @@ const Footer = () => {
           <Link href="/" color="inherit">
             Contact Us
           </Link>
-        </Box>
-      </Box>
+        </Box>*/}
+      </Box> 
 
       <Box mt={2}>
         <Typography variant="body2" color="text.secondary">

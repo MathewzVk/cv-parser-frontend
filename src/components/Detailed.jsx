@@ -61,8 +61,7 @@ function Detailed({ data }) {
             <Button variant="contained" fullWidth>
               <Link
                 to={{
-                  pathname: "/document-download",
-                  state: { foo: "bar" },
+                  pathname: "/document-download"
                 }}
               >
                 Edit/Download File

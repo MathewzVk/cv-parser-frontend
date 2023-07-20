@@ -5,6 +5,8 @@ import Detailed from "./Detailed";
 import "../Styles/DocumentUploadForm.css";
 import "../Styles/home.scss";
 import { useDocumentFetch } from "../contexts/DocumentFetchContext";
+import Navbar from "./Navbar";
+import Footer from "./Footer"
 
 const DocumentUploadForm = () => {
   const { setSelectedFile, handleFileUpload, parsedData, selectedFile } = useDocumentFetch();
@@ -28,10 +30,13 @@ const DocumentUploadForm = () => {
   };
 
   return (
+    <>
+    <Navbar />
+    <div className = "formbold-main-wrapper">
     <div className="center-upload-form">
-      <Card variant="outlined" className="document-upload-card" style={{ display: "flex", flexDirection: "column" }}>
+      <Card variant="outlined" className="document-upload-card">
         <CardContent>
-          <Typography variant="h5" component="h2" gutterBottom style={{ padding: "40px" }}>
+          <Typography variant="h5" component="h2" gutterBottom style={{ padding: "20px" }}>
             Upload Resume
           </Typography>
           <form onSubmit={handleFileUpload}>
@@ -52,7 +57,7 @@ const DocumentUploadForm = () => {
               </Button>
             </label>
             {selectedFile && (
-              <Typography variant="body1" gutterBottom style={{ padding: "10px" }}>
+              <Typography variant="body1" gutterBottom style={{ padding: "5px" }}>
                 Selected File: {selectedFile.name}
               </Typography>
             )}
@@ -62,17 +67,17 @@ const DocumentUploadForm = () => {
               variant="contained"
               disabled={!selectedFile}
               startIcon={<CloudUploadIcon />}
-              style={{ marginTop: "30px" }}
+              style={{ marginTop: "20px" }}
               onClick={handleUploadComplete}
             >
               Upload
             </Button>
           </form>
         </CardContent>
-        {fileParsing && <Typography variant="body1" gutterBottom style={{ padding: "10px" }}>
+        {fileParsing && <Typography variant="body1" gutterBottom style={{ padding: "5px" }}>
           Your file is parsing. Please wait...
         </Typography>}
-        {fileParsed && <Typography variant="body1" gutterBottom style={{ padding: "10px" }}>
+        {fileParsed && <Typography variant="body1" gutterBottom style={{ padding: "5px" }}>
           Almost ready...
         </Typography>}
         {parsedData && (
@@ -86,6 +91,9 @@ const DocumentUploadForm = () => {
         <p>Then you can view your resume in a more readable format.</p>
       </div>}
     </div>
+    </div>
+    <Footer/>
+    </>
   );
 };
 
