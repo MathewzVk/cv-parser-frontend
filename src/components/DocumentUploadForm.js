@@ -29,7 +29,7 @@ const DocumentUploadForm = () => {
 
   return (
     <div className="center-upload-form">
-      <Card variant="outlined" className="document-upload-card">
+      <Card variant="outlined" className="document-upload-card" style={{ display: "flex", flexDirection: "column" }}>
         <CardContent>
           <Typography variant="h5" component="h2" gutterBottom style={{ padding: "40px" }}>
             Upload Resume

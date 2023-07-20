@@ -6,7 +6,7 @@ import "../Styles/home.scss";
 
 function Home() {
   return (
-    <div>
+    <div className="home-container">
         <Navbar />
         <DocumentUploadForm />
         <Footer />
